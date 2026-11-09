@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Apocalyptic Affairs</title>
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Young+Serif&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="welcome">
+<img src="images/bart-seal.png" alt="Official Department of Apocalyptic Affairs seal featuring Supreme Hyrax Bartholomew" id="bartSeal">
+
+    <h1>Department of Apocalyptic Affairs</h1>
+
+<div class="oak-divider" aria-hidden="true">
+    
+<span>❦</span>
+
+</div>
+
+    <p>Please Remain Alive Until Processing Is Complete</p>
+
+    <p>
+        Civilization has collapsed.
+        Your paperwork has not.
+    </p>
+
+    <button onclick="beginApplication()">Begin Survival Application</button>
+
+<picture>
+    <source
+        srcset="images/milton.png"
+        media="(prefers-reduced-motion: reduce)"
+    >
+    <img
+        
+
+src="images/milton.gif"
+
+
+
+        alt="Milton P. Crumb, a mischievous raccoon eating government paperwork"
+        id="milton"
+    >
+</picture>
+
+    </div>
+    
+<div id="application" style="display: none;">
+<img
+    src="images/beatrice.gif"
+    alt="Beatrice supervising the application"
+    class="beatrice-character"
+>
+    
+<div class="form-header">
+    <div class="form-reference">
+        <span>D.A.A. — FORM 001</span>
+        <span>REV. 11/2026</span>
+    </div>
+
+    <h2>Application for Continued Existence</h2>
+
+    <p class="form-warning">
+        Completion does not guarantee survival.
+    </p>
+</div>
+
+
+    
+<div id="questionsContainer"></div>
+
+<h3>Supplemental Testimony — Form 001-B</h3>
+
+<p>Explain why you deserve to survive the apocalypse.</p>
+
+<textarea
+    id="testimony"
+    rows="4"
+    maxlength="500"
+    placeholder="Your explanation will be reviewed by qualified personnel. Allegedly."
+></textarea>
+
+<p><small>Optional. Maximum 500 characters.</small></p>
+
+<button onclick="submitApplication()">Submit Application</button>
+
+</div>
+<div id="review" style="display: none;">
+    <h2>Administrative Review in Progress</h2>
+    <img
+    src="images/reginald.png"
+    alt="Reginald supervising the administrative review"
+    class="reginald-character"
+>
+
+    <p>Form 001 has been submitted for official evaluation.</p>
+
+    <p id="reviewMessage">Receiving survival application...</p>
+<div class="processing-station">
+    
+<div class="processing-raccoon">
+    <img src="images/processing-raccoon.gif" alt="A frantic raccoon clerk carrying paperwork">
+</div>
+
+    <div class="processing-track">
+        <div class="processing-fill"></div>
+    </div>
+    <p class="processing-label">
+        PROCESSING EFFICIENCY: NOT GUARANTEED
+    </p>
+</div>
+
+
+    <p><small>Please remain available for further questioning.</small></p>
+</div>
+<audio id="bartAudio" preload="auto">
+    <source src="Audio/bart-scream.mp3" type="audio/mpeg">
+</audio>
+<div id="hyraxOverride" style="display: none;">
+    <img
+    id="bartScream"
+    src="images/bart-scream.gif"
+    alt="Bartholomew Supreme Hyrax screaming in executive outrage"
+>
+    <h2>UNAUTHORIZED OVERRIDE DETECTED</h2>
+
+    <p>Supreme Executive Authority has intervened.</p>
+
+    <h1>AAAWAAAWAAAAAAA!!!</h1>
+
+    <p>All departmental personnel are advised to remain calm.</p>
+    <p><small>Three employees have resigned. One was a stapler.</small></p>
+</div>
+
+<div id="verdict" style="display: none;">
+    <img
+    id="percivalCharacter"
+    src="images/percival.gif"
+    alt="Percival nervously clutching appeal paperwork"
+    style="display: none;"
+>
+    
+<h2>Official Department Verdict</h2>
+
+<div id="verdictStatus"></div>
+<h3 id="verdictTitle"></h3>
+<p id="verdictDetail"></p>
+<p id="verdictText"></p>
+
+    
+<p id="verdictFinePrint" style="display: none;"></p>
+
+<div id="appealSection" style="display: none;">
+    
+
+<button id="appealButton" type="button" onmouseenter="dodgeAppeal()" onclick="fileAppeal()">File an Appeal</button>
+
+
+    <p id="appealResponse"></p>
+</div>
+
+
+ <div id="testimonyResponse" style="display: none;">
+   <h3>A Note from the Records Department</h3>
+    <p id="testimonyResponseText"></p>
+</div>   
+<button onclick="restartApplication()">Start New Application</button>
+
+</div>
+
+
+<footer id="site-footer">
+    <p class="footer-heading">❦ Department of Apocalyptic Affairs ❦</p>
+    <p>Established Before the Collapse · Still Processing</p>
+    <p class="footer-disclaimer">
+        No refunds. No guarantees. No surviving appeals department.
+    </p>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

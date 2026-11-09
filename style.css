@@ -1,0 +1,1072 @@
+
+/* Department of Apocalyptic Affairs */
+
+
+
+body {
+    background-color: #18271f;
+    
+background-image: url("images/forest-background-2.png");
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #29342F;
+    font-family: Georgia, serif;
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+
+
+h1 {
+    color: #d5b77a;
+    font-size: 42px;
+    letter-spacing: 2px;
+font-family: 'Berkshire Swash', Georgia, serif;
+
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+button {
+    
+
+background-color: #7c342e;
+  color: #fff4df;
+    border: 2px solid #d5b77a;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+button:hover {
+    background-color: #a4473e;
+    transform: scale(1.05);
+}
+
+#verdictFinePrint {
+    font-size: 0.8rem;
+    font-style: italic;
+    opacity: 0.65;
+    margin-top: 25px;
+    line-height: 1.5;
+}
+
+#appealSection {
+    margin-top: 30px;
+}
+
+#appealButton {
+    position: relative;
+    transition: transform 0.2s ease;
+    margin: 10px;
+}
+
+#appealResponse {
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+#welcome {
+    
+background-color: #26372F;
+
+
+
+background-image: url("images/oak-border.png");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+
+    
+
+
+    color: #F2EBDD;
+    padding: 45px 30px;
+    border-radius: 12px;
+    max-width: 1000px;
+margin: 0 auto;
+box-sizing: border-box;
+
+}
+
+#bartSeal {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+#welcome {
+    position: relative;
+}
+
+
+#milton {
+    position: absolute;
+    bottom: 35px;
+    right: 25px;
+    width: 180px;
+    max-width: 25%;
+    height: auto;
+    pointer-events: none;
+
+
+}
+
+#welcome button {
+    margin-bottom: 25px;
+}
+
+
+
+
+@keyframes miltonIdle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    #milton {
+        animation: none;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .milton-paper {
+        display: none;
+    }
+}
+
+
+.oak-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    width: 55%;
+    max-width: 360px;
+    margin: 0 auto 18px;
+    color: #BFA16C;
+}
+
+.oak-divider::before,
+.oak-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #BFA16C,
+        transparent
+    );
+}
+
+.oak-divider span {
+    font-size: 16px;
+    line-height: 1;
+}
+
+#welcome button {
+    background: linear-gradient(
+        180deg,
+        #873a42 0%,
+        #64252e 55%,
+        #4b1d26 100%
+    );
+    color: #f6e5bd;
+    border: 2px solid #c9a66b;
+    
+border-radius: 8px;
+
+
+    box-shadow:
+        inset 0 0 0 2px #4b1d26,
+        inset 0 0 0 3px #c9a66b,
+        0 5px 12px rgba(0, 0, 0, 0.3);
+    padding: 15px 32px;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+
+#welcome button,
+#application button,
+#verdict button {
+
+    position: relative;
+    isolation: isolate;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    padding: 17px 34px;
+    z-index: 0;
+}
+
+#welcome button::before,
+#welcome button::after,
+#application button::before,
+#application button::after,
+#verdict button::before,
+#verdict button::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    
+clip-path: polygon(
+    6% 0,
+    94% 0,
+    100% 20%,
+    100% 80%,
+    94% 100%,
+    6% 100%,
+    0 80%,
+    0 20%
+);
+
+}
+
+
+#welcome button::before,
+#application button::before,
+#verdict button::before {
+    inset: 0;
+    background: #c9a66b;
+    z-index: -2;
+}
+
+#welcome button::after,
+#application button::after,
+#verdict button::after {
+    inset: 3px;
+    background: linear-gradient(
+        180deg,
+        #873a42,
+        #4b1d26
+    );
+    z-index: -1;
+}
+
+
+#site-footer {
+    width: fit-content;
+    max-width: 90%;
+    margin: 45px auto 0;
+    padding: 9px 22px;
+    background: rgba(25, 40, 32, 0.88);
+    border: 1px solid rgba(191, 161, 108, 0.55);
+    border-radius: 8px;
+    color: #f0dfbd;
+    font-size: 11px;
+    line-height: 1.5;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+}
+
+#site-footer p {
+    margin: 3px 0;
+}
+
+#site-footer .footer-heading {
+    color: #d5b77a;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+font-size: 12px;
+
+}
+
+#site-footer .footer-disclaimer {
+    color: #c9bca0;
+    font-size: 11px;
+    font-style: italic;
+}
+
+
+
+
+#welcome p {
+    font-family: 'Cinzel', serif;
+}
+
+
+#welcome p:last-of-type {
+    font-family: 'Cinzel', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: #e8d7b4;
+}
+
+#welcome button {
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+#application {
+    width: 90%;
+    max-width: 900px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 90px 85px;
+
+    background-image: url("images/application-parchment.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+border-radius: 28px;
+overflow: hidden;
+
+
+    color: #3b2a1e;
+    text-align: left;
+    position: relative;
+    
+}
+
+/* Official application header */
+
+#application .form-header {
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #94754c;
+    text-align: center;
+}
+
+#application .form-reference {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 18px;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #38291d;
+    padding: 18px 40px 0;
+    letter-spacing: 0.4px;
+
+}
+
+#application .form-header h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 25px;
+    color: #38291d;
+    margin: 0 0 12px;
+}
+
+#application .form-warning {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-style: italic;
+    color: #755a3e;
+    margin: 0;
+}
+
+
+/* Individual application questions */
+
+#application .question-section {
+    padding: 22px 12px 26px;
+    border-bottom: 1px solid rgba(100, 70, 40, 0.35);
+    margin-bottom: 8px;
+}
+
+#application .question-section h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 17px;
+    color: #49301f;
+    margin: 0 0 12px;
+}
+
+#application .question-section p {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 0 0 18px;
+    color: #38291d;
+}
+
+#application .question-section label {
+    font-family: Georgia, serif;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #49301f;
+    cursor: pointer;
+}
+
+
+#application .question-section input[type="radio"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #785637;
+    border-radius: 50%;
+    background-color: rgba(255, 248, 225, 0.35);
+    margin: 0 8px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#application .question-section input[type="radio"]:checked {
+    background-color: #7c342e;
+    box-shadow: inset 0 0 0 3px #ead4a6;
+}
+
+#application .question-section input[type="radio"]:focus-visible {
+    outline: 2px solid #7c342e;
+    outline-offset: 3px;
+}
+
+
+#application .question-section:first-child {
+    padding-top: 8px;
+}
+
+/* Supplemental testimony field */
+
+#application #testimony {
+    display: block;
+    width: 100%;
+    min-height: 140px;
+    box-sizing: border-box;
+    padding: 16px 18px;
+
+    background-color: rgba(255, 248, 225, 0.4);
+    border: 1px solid #94754c;
+    border-radius: 4px;
+
+    color: #38291d;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.6;
+
+    resize: vertical;
+}
+
+#application #testimony::placeholder {
+    color: #80684e;
+    font-style: italic;
+    opacity: 1;
+}
+
+#application #testimony:focus {
+    outline: 2px solid #7c342e;
+    outline-offset: 2px;
+}
+
+
+#application button {
+    display: block;
+    margin: 20px auto 30px;
+}
+
+
+
+#application h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    color: #49301f;
+    letter-spacing: 0.3px;
+}
+
+#application button::before {
+    background: #26372F;
+}
+
+/* Administrative Review Panel */
+
+#review {
+    width: 90%;
+    max-width: 700px;
+    box-sizing: border-box;
+    margin: 45px auto;
+    padding: 45px 40px;
+
+    background: #26372F;
+    border: 1px solid #c9a66b;
+    border-radius: 12px;
+
+    color: #f2e8d4;
+    text-align: center;
+}
+
+#review h2 {
+    font-family: 'Cinzel', serif;
+    color: #d5b77a;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+#review p {
+    color: #f2e8d4;
+    line-height: 1.7;
+}
+
+#review #reviewMessage {
+    margin: 35px 0;
+    font-size: 19px;
+    font-style: italic;
+    color: #e9c98d;
+}
+
+#review small {
+    color: #c8bda8;
+}
+
+/* Administrative Review — Raccoon Clerk */
+
+#review .processing-raccoon img {
+    display: block;
+    width: 90px;
+    height: auto;
+}
+
+
+#review .processing-raccoon {
+    width: 90px;
+    animation: raccoon-patrol 5s linear infinite;
+}
+
+
+
+
+@keyframes raccoon-patrol {
+    0% {
+        transform: translateX(0) scaleX(1);
+    }
+
+    30% {
+        transform: translateX(470px) scaleX(1);
+    }
+
+    48% {
+        transform: translateX(470px) scaleX(1);
+    }
+
+    52% {
+        transform: translateX(470px) scaleX(-1);
+    }
+
+    82% {
+        transform: translateX(0) scaleX(-1);
+    }
+
+    96% {
+        transform: translateX(0) scaleX(-1);
+    }
+
+    100% {
+        transform: translateX(0) scaleX(1);
+    }
+}
+
+
+/* Administrative Review — Processing Track */
+
+#review .processing-track {
+    width: 100%;
+    height: 7px;
+    margin-top: -8px;
+    background: #14241d;
+    border: 1px solid #9c8051;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+#review .processing-fill {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        #8c6a3e,
+        #d5b77a
+    );
+    border-radius: 10px;
+    animation: paperwork-progress 5s linear infinite;
+}
+  
+
+@keyframes paperwork-progress {
+    0%   { width: 0%; }
+    30%  { width: 84%; }
+    52%  { width: 84%; }
+    82%  { width: 0%; }
+    100% { width: 0%; }
+}
+
+/* Official Department Verdict */
+
+#verdict {
+    width: 90%;
+    max-width: 800px;
+    box-sizing: border-box;
+    margin: 45px auto;
+    padding: 85px 65px 55px;
+
+    background-image: url("images/application-parchment.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    border-radius: 28px;
+    overflow: hidden;
+
+    color: #38291d;
+    text-align: center;
+}
+
+#verdict h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 26px;
+    color: #38291d;
+    margin: 0 0 30px;
+}
+
+#verdictText {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #49301f;
+    margin: 25px 0;
+}
+
+/* Official Verdict Status Stamp */
+
+#verdictStatus {
+    display: inline-block;
+    padding: 10px 24px;
+    margin: 10px auto 20px;
+
+    border: 3px double #7c342e;
+    color: #7c342e;
+
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    transform: rotate(-4deg);
+}
+
+/* Official Verdict — Stamp Animation */
+
+#verdictStatus {
+    animation: verdict-stamp 0.55s ease-out both;
+}
+
+@keyframes verdict-stamp {
+    0% {
+        opacity: 0;
+        transform: rotate(-12deg) scale(2);
+    }
+
+    65% {
+        opacity: 1;
+        transform: rotate(-4deg) scale(0.92);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(-4deg) scale(1);
+    }
+}
+
+/* Official Verdict — Title Typography */
+
+#verdictTitle {
+    font-family: 'Cinzel', serif;
+    font-size: 23px;
+    font-weight: 700;
+    color: #49301f;
+    margin: 24px 0 12px;
+}
+
+/* Official Verdict — Assignment or Reason */
+
+#verdictDetail {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+    color: #75543a;
+    line-height: 1.5;
+    margin: 0 0 30px;
+}
+
+/* Official Verdict — Explanation and Final Remark */
+
+#verdictText > p {
+    margin: 0 0 24px;
+    line-height: 1.6;
+}
+
+#verdictText > .verdict-final-remark {
+    font-size: 17px;
+    font-style: italic;
+    color: #75543a;
+    margin-top: 10px;
+}
+
+/* Give the verdict's final remark more emphasis */
+
+#verdictText > .verdict-final-remark {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 600;
+    color: #49301f;
+    line-height: 1.6;
+}
+
+
+/* Official verdict stamp colors */
+
+#verdictStatus.status-approved {
+    color: #247A50;
+    border-color: #247A50;
+}
+
+#verdictStatus.status-denied {
+    color: #A52A22;
+    border-color: #A52A22;
+}
+
+#verdictStatus.status-disaster {
+    color: #70419A;
+    border-color: #70419A;
+}
+
+
+/* Milton's handwritten testimony note */
+
+
+#testimonyResponse {
+    position: relative;
+    width: 85%;
+    box-sizing: border-box;
+    margin: 35px auto 30px;
+    padding: 65px 65px 85px 125px;
+
+    background-image: url("images/milton-note.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    transform: rotate(-2deg);
+    text-align: left;
+}
+
+
+
+
+/* Handwritten heading */
+
+#testimonyResponse h3 {
+   font-family: 'Sedgwick Ave', cursive;
+    font-size: 19px;
+    font-weight: 700;
+    color: #513827;
+    margin: 0 0 12px;
+}
+
+/* Handwritten response */
+
+#testimonyResponseText {
+    font-family: 'Sedgwick Ave', cursive;
+    font-size: 19px;
+    line-height: 1.35;
+    color: #493526;
+    white-space: pre-line;
+    margin: 0;
+}
+/* Milton's highly unprofessional crayon collection */
+
+.milton-crayon-1 {
+    color: #923D35;
+}
+
+.milton-crayon-2 {
+    color: #70428A;
+}
+
+.milton-crayon-3 {
+    color: #386B4A;
+}
+
+.milton-crayon-4 {
+    color: #A65B25;
+}
+/* Moss-green borders for verdict buttons */
+#verdict button::before {
+    background: #26372F;
+}
+.beatrice-character {
+    position: absolute;
+    bottom: 90px;
+    right: 100px;
+    width: 170px;
+    height: auto;
+    z-index: 2;
+    transform: scaleX(-1);
+}
+#review {
+    position: relative;
+}
+
+.reginald-character {
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    right: auto;
+    width: 120px;
+    height: auto;
+    z-index: 2;
+}
+#verdict {
+    position: relative;
+}
+
+#percivalCharacter {
+    position: absolute;
+    width: 125px;
+    height: auto;
+    bottom: 120px;
+    left: 120px;
+    z-index: 2;
+
+}
+  #hyraxOverride {
+    max-width: 760px;
+    margin: 35px auto;
+    padding: 20px 35px 25px;
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        145deg,
+        #49301f,
+        #261b23
+    ); 
+
+    border: 3px double #d5b77a;
+    border-radius: 16px;
+
+    box-shadow:
+        0 0 35px rgba(125, 28, 40, 0.45),
+        inset 0 0 30px rgba(0, 0, 0, 0.3);
+
+    text-align: center;
+    color: #f1dfbd;
+}
+
+#hyraxOverride h2 {
+    color: #e9b56f;
+}
+
+#hyraxOverride h1 {
+    color: #f4c77f;
+}
+
+#hyraxOverride p {
+    color: #e5d3bc;
+}
+#hyraxOverride h1 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 3px;
+}
+@keyframes bartShake {
+    0%   { transform: translate(0, 0) rotate(0deg); }
+    15%  { transform: translate(-5px, 2px) rotate(-1deg); }
+    30%  { transform: translate(5px, -3px) rotate(1deg); }
+    45%  { transform: translate(-4px, 3px) rotate(-1deg); }
+    60%  { transform: translate(4px, -2px) rotate(1deg); }
+    75%  { transform: translate(-2px, 1px) rotate(0deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* The entire emergency panel gets one quick jolt */
+#hyraxOverride {
+    animation: bartShake 0.25s ease-in-out;
+}
+
+/* Bart continues his executive tantrum */
+#bartScream {
+    animation: bartShake 0.35s ease-in-out 0.25s 1;
+}
+button[onclick="restartApplication()"] {
+    position: relative;
+    top: -15px;
+}
+#application button,
+#verdict button {
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: #f6e5bd;
+}
+#appealResponse:not(:empty) {
+    background-image: url("images/appeal-note.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    max-width: 560px;
+      min-height: 260px;
+    margin: 0 auto 8px;
+    padding: 95px 65px 55px;
+    box-sizing: border-box;
+
+    position: relative;
+    top: -15px;
+
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #681b2c;
+    text-align: center;
+}
+@media (max-width: 600px) {
+    #application {
+        width: 95%;
+        padding: 85px 35px 110px;
+    }
+
+    .beatrice-character {
+    width: 90px;
+    right: 5px;
+    bottom: 130px;
+}
+
+    #application .form-reference {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        font-size: 10px;
+        padding: 0;
+        margin-bottom: 50px;
+        transform: translateY(12px);
+    }
+
+    #application .form-reference span {
+        white-space: nowrap;
+    }
+    #milton {
+    width: 115px;
+    max-width: none;
+    right: 10px;
+    bottom: 55px;
+}
+#percivalCharacter {
+    width: 105px;
+    left: 8px;
+    right: auto;
+    bottom: 110px;
+}
+#appealResponse:not(:empty) {
+    max-width: 100%;
+    min-height: 400px;
+    padding: 125px 15px 45px;
+    font-size: 12px;
+    line-height: 1.3;
+}
+#verdict:has(#appealResponse:not(:empty))
+button[onclick="restartApplication()"] {
+    top: -65px;
+}
+
+#testimonyResponse {
+    width: 100%;
+    padding: 65px 15px 75px 40px;
+}
+#review .processing-raccoon {
+    animation: raccoon-patrol-mobile 5s linear infinite;
+}
+#verdict:has(#testimonyResponse[style*="display: block"]):not(:has(#appealResponse:not(:empty))) button[onclick="restartApplication()"] {
+    top: -45px;
+}
+}
+#verdict h2 {
+    position: relative;
+    top: 25px;
+    #verdict:has(#appealResponse:not(:empty)) h2 {
+    top: 65px;
+}
+#bartScream {
+    display: block;
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 15px;
+}
+}
+
+@keyframes raccoon-patrol-mobile {
+    0% {
+        transform: translateX(0) scaleX(1);
+    }
+
+    30%, 48% {
+        transform: translateX(150px) scaleX(1);
+    }
+
+    52% {
+        transform: translateX(150px) scaleX(-1);
+    }
+
+    82%, 96% {
+        transform: translateX(0) scaleX(-1);
+    }
+
+    100% {
+        transform: translateX(0) scaleX(1);
+    }
+}
+.reginald-character {
+    width: 75px;
+    bottom: 5px;
+    left: 10px;
+}
+@media (max-width: 600px) {
+    #bartScream {
+        display: block;
+        width: 180px;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto 15px;
+    }
+    #hyraxOverride h1 {
+    font-size: 42px;
+    line-height: 1;
+    letter-spacing: 1px;
+    overflow-wrap: anywhere;
+    max-width: 100%;
+    margin: 35px auto;
+}
+}
+
